@@ -1,0 +1,318 @@
+
+body {
+  background-color: #C2CAF0;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#86879d;
+}
+
+#root {
+  width: 1500px;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+.kanban {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 30px;
+  background-color: #EEF2F9;
+  border: 4px solid #E4E8F0;
+  border-radius: 5px;
+}
+
+/* COLUMNS */
+
+.column {
+  padding: 10px;
+  min-width: 260px;
+  min-height: 600px;
+  border-radius: 5px;
+  margin: 5px;
+  border: 4px solid #E4E8F0;
+  background-color:  #F6F8FC;
+  width: 25%;
+  justify-content: stretch;
+}
+
+.col_first {
+  border-top: 4px solid #D671AE;
+}
+.col_second {
+  border-top: 4px solid #ffbd0a;
+}
+.col_third {
+  border-top: 4px solid #8FABFB;
+}
+.col_fourth {
+  border-top: 4px solid #6ddba6;
+}
+
+.column__container {
+  display: flex;
+  justify-content: stretch;
+  
+}
+
+/* TASK  */
+
+.task {
+  padding: 10px;
+  min-width: 230px;
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid #E4E8F0; 
+}
+
+.task__header {
+  display: flex;
+  justify-content: center;
+}
+
+.task__delete {
+  padding: 5px;
+  border:none;
+  margin-left: 230px;
+  background-color: white;
+  color:#86879d;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.task__delete:hover {
+  color: red;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 0;
+}
+
+.button {
+  padding: 5px;
+  border: 1px solid #E4E8F0;
+  border-radius: 5px;
+  background-color: white;
+  color:#86879d;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.button:hover {
+  background-color: #C2CAF0;
+}
+
+.button__left {
+  margin-right: 30px;
+}
+
+.button__right {
+  margin-left: 30px;
+}
+
+.btn_mobile {
+  display: none;
+}
+
+/* FORM */
+
+.form {
+  color: white;
+  margin-top: 50px;
+  min-height: 60px;;
+  font-weight: 700;
+  background-color: #94A9FB;
+  border: 3px solid #8a9ef1;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.form__container {
+  padding: 10px;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #94A9FB;
+  border: 1px solid #F6F8FC;
+  opacity: 70%;
+  box-shadow: inset 7px 7px 15px #8498e9,
+  inset -7px -7px 15px #a5b7fd;
+}
+
+.form__submit {
+  background-color: #b194fb;
+  border: 1px solid #765cb6;
+  color: white;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.form__submit:hover, input:hover {
+  box-shadow: 4px 4px 0px -1px rgba(66, 68, 90, 1);
+}
+
+::placeholder {
+  color: white;
+}
+
+/* -------------------- media max 1230px --------------------  */
+ @media (max-width: 1230px) { 
+  
+  #root {
+    width: 1230px
+  }
+  
+  .column {
+    padding: 10px;
+    min-width: 180px;
+    min-height: 600px;
+    margin: 5px;
+    margin-right: 10px;
+  }
+
+  .task {
+    padding: 10px;
+    min-width: 20%;
+    margin-top: 15px;
+
+  }
+
+  .column__container {
+    display: flex;
+
+  }
+
+  .task__delete {
+    margin-left: 160px;
+  }
+} 
+
+/* -------------------- media max 990px --------------------  */
+@media (max-width: 990px) {
+ 
+  .column {
+    padding: 10px;
+    min-height: 600px;
+    margin: 5px;
+    margin-right: 10px;
+    width: 40%;
+  }
+
+  .task {
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .column__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .kanban { 
+    max-width: 990px;
+  }
+
+  .task__delete {
+    margin-left: 200px;
+  }
+}
+
+/* -------------------- media max 620px --------------------  */
+@media (max-width: 620px) {
+  
+  .column {
+    padding: 10px;
+    min-width: 90%;
+    min-height: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;;
+  }
+
+  .task {
+    padding: 10px;
+    min-width: 120px;
+    margin-top: 15px;
+  }
+
+  .column__container {
+    display: flex;
+    flex-direction: column;    
+  }
+
+  .form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .form {
+    margin: 0;
+    max-width: 320px;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #C2CAF0;
+    border: none;
+  }
+
+  input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;;
+    margin-left: 30px;;
+    background-color: #C2CAF0;
+    box-shadow: none;
+    border: 1px solid #765cb6;
+    justify-content: center;
+    text-align: center;
+  }
+
+  input::placeholder {
+    justify-content: center;
+    color: #765cb6;
+  }
+
+  .form__submit {
+    width: 150px;;
+    margin: 0 auto;
+  }
+
+  .kanban { 
+    max-width: 300px;
+    background-color: #C2CAF0;
+    border: none;
+  }
+
+  .task__delete {
+    margin-left: 180px;
+  }
+
+  h1 {
+    color: #765cb6;
+  }
+
+  .btn_mobile {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 2px 8px 2px 8px;;;
+  }
+
+  .btn_desktop {
+    display: none;
+  }
+
+}
