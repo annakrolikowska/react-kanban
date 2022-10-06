@@ -17,7 +17,7 @@ function Task(props) {
         <div className='task'>
             <button onClick={() =>  removeTask(task)} className='task__delete'>X</button>
             <h3>{title}</h3>
-            <p>User:{user}</p>
+            <p>User: {user}</p>
             {task.columnId!==1 && <button onClick={() => moveBackTask(task)} className='button__left btn_desktop button' > {<FontAwesomeIcon icon={faArrowLeftLong}/>} </button> }
             {task.columnId!==4 && <button onClick={() => moveTask(task)} className='button__right btn_desktop button' > {<FontAwesomeIcon icon={faArrowRightLong}/>} </button> }
             {task.columnId!==1 && <button onClick={() => moveBackTask(task)} className='button__left btn_mobile button' > {<FontAwesomeIcon icon={faArrowUpLong}/>} </button> }

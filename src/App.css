@@ -70,6 +70,7 @@ h1, h2, h3 {
   margin-top: 15px;
   border-radius: 5px;
   border: 1px solid #E4E8F0; 
+  box-shadow: 4px 4px 0px -1px #d6dce7;
 }
 
 .task__header {
@@ -94,6 +95,7 @@ h1, h2, h3 {
 
 h3 {
   margin: 0;
+  font-weight: 600;
 }
 
 .button {
